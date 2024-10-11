@@ -1,0 +1,23 @@
+CREATE DATABASE my_db
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_spanish_ci;
+como borrar esa bd
+
+USE my_db;
+
+CREATE TABLE Usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    fecha_de_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO Usuarios (nombre, email) VALUES
+('Juan Pérez', 'juan.perez@example.com'),
+('María Gómez', 'maria.gomez@example.com'),
+('Carlos López', 'carlos.lopez@example.com');
+
+SELECT * FROM Usuarios;
+
+
